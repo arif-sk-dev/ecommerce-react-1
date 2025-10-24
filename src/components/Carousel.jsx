@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { getData } from "../context/DataContext";
 import { Autoplay } from "swiper/modules";
 import { FcNext, FcPrevious } from "react-icons/fc";
+import { Link } from "react-router-dom";
 // import Category from "./Category";
 
 const Carousel = () => {
@@ -52,7 +53,7 @@ const Carousel = () => {
   }
 
   return (
-    <div className="w-full overflow-hidden mt-18 pb-10">
+    <div className="max-w-7xl mx-auto overflow-hidden mt-18 pb-10">
       <Slider {...settings}>
         {data.slice(3, 8).map((item, index) => {
           return (
@@ -64,7 +65,7 @@ const Carousel = () => {
                     {/* <h3 className="bg-gradient-to-r from-[#470165] via-[#049385] to-[#880e05]     bg-clip-text text-transparent lg:text-4xl md:text-2xl sm:text-[16px] font-bold mx-auto">Brighten Your World With The Best Fashion!</h3> */}
                     <h1 className="bg-gradient-to-r from-[#030caf] via-[#940404] to-[#02681b]     bg-clip-text text-transparent md:text-4xl sm:text-2xl font-bold mx-auto">{item.title}</h1>
 
-                    <button className="bg-red-400 text-white px-6 py-2 rounded-full hover:bg-red-500 transition border-1 cursor-pointer">Shop Now</button>
+                    <Link to="/shop"><button className="bg-red-400 text-white px-6 py-2 rounded-full hover:bg-red-500 transition border-1 cursor-pointer">Shop Now</button></Link>
                   </div>
                   <div className="flex-1">
                     <img src={item.image} className=" md:h-[25vh] lg:h-[50vh] sm:h-[50vh] mx-auto dark-drop-shadow-lg hover:scale-105 transition-all" />
