@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { LuNotebookPen } from "react-icons/lu";
 import { TbTruckDelivery } from "react-icons/tb";
 import { BsHandbag } from "react-icons/bs";
+import emptyCart from "../../assets/empty-cart.png"
 
 const Cart = () => {
   const { cartItem, updateQuantity, removeItem } = useCart();
@@ -39,9 +40,11 @@ const Cart = () => {
         Your Cart ({cartItem.length} items)
       </h2>
       {cartItem.length === 0 ? (
-        <p className="text-2xl text-zinc-400 text-center mt-15 min-h-screen italic">
-          No items in cart.
-        </p>
+        <div className="flex flex-col gap-5 justify-center items-center">
+          <p className="text-2xl text-zinc-400 text-center mt-15 italic">Oh No, Your Cart is Empty!</p>
+          <img src={emptyCart} alt="" className="max-w-[300px] mx-auto" />
+          <Link to="/shop"><button className="bg-red-500 px-3 py-1.5 text-white rounded-md mt-3 cursor-pointer hover:bg-red-600">Continue Shopping</button></Link>
+        </div>
       ) : (
         <div>
           <div className="mt-10">
