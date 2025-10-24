@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://arif-sk-dev.github.io/online-shop",
+  "homepage": "https://arif-sk-dev.github.io/ecommerce-react-1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,7 +11,6 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --repo git@github.com:arif-sk-dev/ecommerce-react-1.git"
-
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
