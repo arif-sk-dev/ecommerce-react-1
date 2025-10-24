@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+::selection {
+  background-color: green;
+  color: white;
+}
+.arrows {
+  height: 40px;
+  width: 40px;
+  font-size: 18px;
+  opacity: 0.5;
+}
+.arrows:hover {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+    font-size: 16px !important;
+    color: #ccc !important; 
+    opacity: 0.5 !important; 
+}
+
+.slick-dots li.slick-active button:before {
+    color: #333 !important;
+    font-size: 18px !important; 
+}
+
+.slick-dots li {
+    margin: 0 4px;
+}
+
+input {
+  accent-color: red;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
