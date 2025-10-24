@@ -1,5 +1,6 @@
 // Cart Context 
 import { createContext, useContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export const CartContext = createContext(null);
 
@@ -28,6 +29,7 @@ export const CartProvider = ({children}) => {
     } else {
       //Add new item with quantity
       setCartItem([...cartItem, {...product, quantity: 1}]);
+      toast.success("Item added to Cart!")
     }
   }
 
@@ -41,18 +43,24 @@ export const CartProvider = ({children}) => {
           : item.quantity > 1
           ? item.quantity - 1
           : item.quantity;
+        if (action === "increase") {
+          toast.info("Quantity increased")
+        } else if (action === "decrease") {
+          toast.warn("Quantity decrease");
+        }
+
         return newQuantity > 0 ? { ...item, quantity: newQuantity } : null;
       }
       return item;
     });
     // .filter(item => item !== null); // remove items with quantity 0
-
   setCartItem(updatedCart);
 };
 
 const removeItem = (productId) => {
   const updatedCart = cartItem.filter(item => item.id !== productId);
   setCartItem(updatedCart);
+  toast.error("Item removed from cart");
 };
 
 
