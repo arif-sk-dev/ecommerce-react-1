@@ -9,15 +9,4 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
-
-  // plugins: [
-  //   react(),
-  //   tailwindcss(),
-  // ],
-  // build: {
-  //   outDir: 'dist',
-  // },
-  // server: {
-  //   historyApiFallback: true,
-  // }
 })

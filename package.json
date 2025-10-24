@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://arif-sk-dev.github.io/online-shop",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,8 +15,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
     "axios": "^1.12.2",
-    "ract": "^0.0.1",
-    "react": "^19.1.1",
+    "react": "^19.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.1.1",
     "react-hot-toast": "^2.6.0",
