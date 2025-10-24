@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --repo git@github.com:arif-sk-dev/ecommerce-react-1.git"
+
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
