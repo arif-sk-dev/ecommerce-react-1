@@ -1,10 +1,22 @@
 // Cart Context 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export const CartContext = createContext(null);
 
 export const CartProvider = ({children}) => {
-  const [cartItem, setCartItem] = useState([]);
+  const [cartItem, setCartItem] = useState(() => {
+    // Local Storage save & sync
+    try {
+      const storedCart = localStorage.getItem('cart');
+      return storedCart && storedCart !== "undefined" ? JSON.parse(storedCart) : [];
+    } catch (error) {
+      console.error('Error parsing cart from local Storage!', error);
+    }
+  });
+
+  useEffect(()=> {
+    localStorage.setItem('cart', JSON.stringify(cartItem));
+  }, [cartItem]);
 
   const addToCart = (product)=> {
     const itemInCart = cartItem.find((item) => item.id === product.id);
