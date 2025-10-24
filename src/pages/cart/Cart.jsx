@@ -52,7 +52,7 @@ const Cart = () => {
               return (
                 <div
                   key={index}
-                  className="max-w-7xl mx-auto bg-zinc-50 rounded-md flex items-center justify-between mt-3 p-2"
+                  className="sm max-w-7xl mx-auto bg-zinc-50 rounded-md flex gap-1.5 items-center justify-between mt-3 p-2"
                 >
                   <div className="flex items-center gap-4">
                     <img
@@ -61,13 +61,13 @@ const Cart = () => {
                       className="w-20 h-20 rounded-md"
                     />
                     <div>
-                      <h1 className="w-[250px] line-clamp-2">{item.title}</h1>
+                      <h1 className="w-[120px] md:w-[300px] lg:w-[350px] line-clamp-2">{item.title}</h1>
                       <p className="text-red-500 font-semibold text-lg">
                         ${item.price}
                       </p>
                     </div>
                   </div>
-                  <div className="bg-zinc-600 text-white flex gap-3 rounded-md font-semibold text-lg px-2 py-1">
+                  <div className="bg-zinc-300 flex gap-3 rounded-md font-semibold text-lg px-2 py-1">
                     <button onClick={()=> updateQuantity(item.id, "decrease")} className="cursor-pointer px-1">-</button>
                     <span>{item ?. quantity}</span>
                     <button onClick={()=> updateQuantity(item.id, "increase")} className="cursor-pointer px-1">+</button>
