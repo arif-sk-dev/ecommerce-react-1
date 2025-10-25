@@ -39,13 +39,13 @@ const Shop = () => {
       item.price >= priceRange[0] &&
       item.price <= priceRange[1]
   );
-  const dynamicPage = Math.ceil(filteredData?.length / 10); // for Pagination
+  const dynamicPage = Math.ceil(filteredData?.length / 8); // for Pagination
 
   return (
     <section>
       <div className="max-w-7xl mx-auto px-4 pb-10 mt-20">
         {/* Breadcrumb Navigation start */}
-        <div className="px-2 pt-5 mb-5">
+        <div className="pt-5 mb-5">
           <nav className="text-sm text-zinc-500">
             <ol className="list-reset flex flex-wrap items-center gap-1">
               <li>
@@ -110,7 +110,7 @@ const Shop = () => {
                 <>
                   <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 grid-cols-1 ">
                     {filteredData
-                      ?.slice((page - 1) * 10, page * 10)
+                      ?.slice((page - 1) * 8, page * 8)
                       .map((product, index) => {
                         return <ProductCard key={index} product={product} />;
                       })}

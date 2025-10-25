@@ -6,7 +6,7 @@ const MobileFilter = ({setOpenFilter}) => {
     <div>
       <div className="sm:block md:hidden lg:hidden">
         <div
-          className="text-zinc-600 bg-zinc-100 flex justify-between items-center px-4 py-2.5 mb-7 rounded-md"
+          className="text-zinc-600 border-[0.1px] border-zinc-400 flex justify-between items-center px-4 py-2.5 mb-7 rounded-md"
           onClick={() => setOpenFilter(true)}
         >
           <h1 className="font-semibold">Filters</h1>
