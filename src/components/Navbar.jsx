@@ -71,10 +71,15 @@ const Navbar = () => {
             <NavLink to="/blog" onClick={() => setIsMobileMenuOpen(false)}>Blog</NavLink>
             <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)}>About</NavLink>
             <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</NavLink>
-            {/* <NavLink to="/cart" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2">
-              <FaShoppingCart />
-              <span>Cart</span>
-            </NavLink> */}
+            {/* Shopping Cart icon  */}
+            <NavLink to="/cart" className='md:block cursor-pointer relative'>
+              <FaShoppingCart className='text-xl' />
+              {
+                cartItem.length > 0 && (
+                  <sup className='absolute -top-2.5 -right-2.5 bg-red-400 text-white w-4.5 h-4.5 rounded-2xl flex items-center justify-center text-xs'>{cartItem.length}</sup>
+                )
+              }
+            </NavLink>
           </div>
         </div>
       )}
