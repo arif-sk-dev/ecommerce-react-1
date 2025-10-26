@@ -59,7 +59,7 @@ const Carousel = () => {
           return (
             <div
               key={index}
-              className="w-full bg-zinc-50 py-4 sm:h-[25vh] md:h-[35vh] lg:h-[70vh] z-10">
+              className="w-full py-4 sm:h-[25vh] md:h-[35vh] lg:h-[70vh] z-10">
                 <div className="container flex flex-cols-4 gap-10 justify-between mx-auto  items-center px-4">
                   <div className="space-y-6 flex-3 items-center">
                     {/* <h3 className="bg-gradient-to-r from-[#470165] via-[#049385] to-[#880e05]     bg-clip-text text-transparent lg:text-4xl md:text-2xl sm:text-[16px] font-bold mx-auto">Brighten Your World With The Best Fashion!</h3> */}
